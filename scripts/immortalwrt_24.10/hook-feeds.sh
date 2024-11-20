@@ -36,5 +36,8 @@ echo "src-link routing $routing_feed" >> feeds.conf.default
 sed -i '/src-git telephony/d' feeds.conf.default
 echo "src-link telephony $telephony_feed" >> feeds.conf.default
 
+sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
+ sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
+
 # Update feeds
 ./scripts/feeds update -a
