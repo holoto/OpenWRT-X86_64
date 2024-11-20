@@ -65,6 +65,8 @@ jobs:
         echo "OPENWRTROOT=$PWD" >> $GITHUB_OUTPUT
         mkdir customfeeds
         git clone --depth=1 https://github.com/xuanranran/openwrt-package customfeeds/lovepackages
+        git clone --depth=1 https://github.com/kenzok8/small-package customfeeds/small-package
+        git clone --depth=1 https://github.com/NueXini/NueXini_Packages customfeeds/NueXini_Packages
         git clone --depth=1 https://github.com/xuanranran/rely customfeeds/loverely
         git clone --depth=1 https://github.com/immortalwrt/packages -b $REPO_BRANCH customfeeds/packages
         git clone --depth=1 https://github.com/immortalwrt/luci -b $REPO_BRANCH customfeeds/luci
