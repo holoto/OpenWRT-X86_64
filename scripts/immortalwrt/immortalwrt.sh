@@ -14,6 +14,8 @@ pushd package/community
 # Add openwrt-packages
 git clone --depth=1 https://github.com/xuanranran/openwrt-package openwrt-package
 git clone --depth=1 https://github.com/xuanranran/rely openwrt-rely
+git clone --depth=1 https://github.com/NueXini/NueXini_Packages NueXini_Packages
+git clone --depth=1 https://github.com/kenzok8/small-package small-package
 # git clone --depth=1 https://github.com/immortalwrt/wwan-packages wwan-packages
 chmod 755 openwrt-package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
 popd
@@ -36,7 +38,7 @@ chmod 755 package/base-files/files/sbin/sysupgrade
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
 
 # x86 型号只显示 CPU 型号
 # sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
